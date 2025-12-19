@@ -291,3 +291,19 @@ footer {
         justify-content: center;
     }
 }
+
+
+
+.contact-info a {
+    text-decoration: none;
+    color: var(--text-muted); /* Default color */
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+}
+
+.contact-info a:hover {
+    color: var(--accent); /* Changes to Blue on hover */
+    transform: translateX(5px); /* Small movement effect */
+}
