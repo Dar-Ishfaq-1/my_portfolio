@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     // 1. Highlight Active Nav Link
+    // Detects the current page to apply the 'active' style in the navbar
     const currentPage = window.location.pathname.split("/").pop() || "index.html";
     const navLinks = document.querySelectorAll('.nav-links a');
 
@@ -11,21 +12,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 2. Dynamic Footer Year
+    // Automatically updates the copyright year in the footer
     const yearSpan = document.getElementById('year');
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
 
     // 3. Mobile Menu Toggle Logic
+    // Handles the opening and closing of the hamburger menu on mobile devices
     const hamburger = document.querySelector('.hamburger');
     const navLinksContainer = document.querySelector('.nav-links');
 
     if (hamburger && navLinksContainer) {
         hamburger.addEventListener('click', () => {
-            // Toggle the 'active' class to slide menu in/out
+            // Toggle the 'active' class to slide the mobile menu in/out
             navLinksContainer.classList.toggle('active');
             
-            // Toggle icon between bars (☰) and X (✕)
+            // Switch the icon between hamburger (bars) and close (times)
             const icon = hamburger.querySelector('i');
             if (icon) {
                 icon.classList.toggle('fa-bars');
@@ -34,36 +37,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Close menu when a link is clicked
+    // 4. Close mobile menu when a link is clicked
+    // Ensures the menu disappears when navigating to a new section
     const links = document.querySelectorAll('.nav-links a');
     links.forEach(link => {
         link.addEventListener('click', () => {
-            navLinksContainer.classList.remove('active');
-            const icon = hamburger.querySelector('i');
-            if (icon) {
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-times');
+            if (navLinksContainer.classList.contains('active')) {
+                navLinksContainer.classList.remove('active');
+                const icon = hamburger.querySelector('i');
+                if (icon) {
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times');
+                }
             }
         });
     });
-
-    // 4. Contact Form Submission Simulation
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const btn = this.querySelector('button');
-            const originalText = btn.textContent;
-            
-            btn.textContent = 'Sending...';
-            btn.style.opacity = '0.7';
-            
-            setTimeout(() => {
-                alert('Message Sent Successfully!');
-                this.reset();
-                btn.textContent = originalText;
-                btn.style.opacity = '1';
-            }, 1500);
-        });
-    }
 });
