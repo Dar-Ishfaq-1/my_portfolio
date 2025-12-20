@@ -269,41 +269,79 @@ footer {
     margin-top: auto;
     color: var(--text-muted);
 }
-
 /* --- RESPONSIVE MOBILE --- */
 @media (max-width: 768px) {
-    .nav-links { display: none; } /* Hidden for simplicity in this demo */
-    .contact-wrapper { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 2.5rem; }
-    .page-container { padding: 2rem 15px; }
+    /* 1. Show the hamburger icon */
+    .hamburger {
+        display: block;
+        z-index: 1100; /* Higher than nav-links */
+        color: var(--text-main);
+    }
 
-    /* About Section Mobile Adjustments */
+    /* 2. Transform nav-links into a full-height slide-out menu */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Completely hidden off-screen */
+        width: 80%; /* Takes most of the screen on mobile */
+        height: 100vh;
+        background-color: rgba(30, 41, 59, 0.98); /* Solidify card color with slight transparency */
+        backdrop-filter: blur(10px); /* Modern blur effect */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px; /* Bigger gaps for touch targets */
+        transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+
+    /* 3. Slide menu in when active */
+    .nav-links.active {
+        right: 0;
+    }
+
+    /* 4. Page Layout Adjustments */
+    .hero h1 { 
+        font-size: 2.2rem; /* Shrink title so it doesn't wrap poorly */
+    }
+
+    .hero-buttons { 
+        flex-direction: column; /* Stack buttons on top of each other */
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
     .about-container {
         flex-direction: column;
         text-align: center;
+        gap: 30px;
     }
+
     .about-image img {
-        width: 250px;
-        height: 250px;
-        margin-bottom: 30px;
+        width: 220px;
+        height: 220px;
     }
-    .about-socials {
-        justify-content: center;
+
+    /* 5. Grid Adjustments */
+    .projects-grid {
+        grid-template-columns: 1fr; /* Force single column on phones */
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        padding: 20px;
     }
 }
 
-
-
-.contact-info a {
-    text-decoration: none;
-    color: var(--text-muted); /* Default color */
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between icon and text */
-}
-
-.contact-info a:hover {
-    color: var(--accent); /* Changes to Blue on hover */
-    transform: translateX(5px); /* Small movement effect */
+/* --- TABLET ADJUSTMENTS (Optional but Recommended) --- */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+    
+    .about-container {
+        gap: 30px;
+    }
 }
