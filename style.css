@@ -283,3 +283,11 @@ footer {
     from { transform: translateY(-20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
+
+h2 {
+    color: #ad943f;
+}
+
+h3 {
+    color: #705922;
+}
