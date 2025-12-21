@@ -8,47 +8,70 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        .contact-wrapper {
-            display: flex;             /* Changed from grid to flex */
-            justify-content: center;   /* Centers the box horizontally */
-            align-items: center;       /* Centers vertically if needed */
-            text-align: center;        /* Centers the text inside */
-        }
-
-        .contact-info {
-            max-width: 600px;          /* Prevents it from getting too wide */
-            width: 100%;
-            padding: 2rem;
-        }
-
-        .contact-info h3 {
-            font-size: 2rem;           /* Larger header */
-            margin-bottom: 30px;
-            color: var(--text-main);
-        }
-
-        .contact-info p {
-            font-size: 1.4rem;         /* Larger text (was 1.1rem) */
-            margin-bottom: 25px;       /* More space between lines */
-        }
-
-        .contact-info a {
-            display: inline-flex;      /* Keeps icon and text aligned */
+        /* This ensures the contact content fits inside your existing 'page-container' */
+        .contact-content {
+            display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;   /* Centers content within the link */
-            gap: 15px;                 /* Space between icon and text */
-            padding: 10px 20px;        /* Larger clickable area */
-            transition: transform 0.2s;
+            justify-content: center;
+            padding: 40px 20px;
+            text-align: center;
+            min-height: 60vh;
         }
 
-        .contact-info a:hover {
-            transform: scale(1.05);    /* Slight zoom on hover */
-            color: var(--accent);
+        .contact-card {
+            background: rgba(255, 255, 255, 0.05); /* Subtle dark card effect */
+            padding: 3rem;
+            border-radius: 15px;
+            max-width: 700px;
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .contact-info i {
-            font-size: 1.6rem;         /* Larger icons */
-            color: var(--accent);
+        .contact-card h3 {
+            color: #D4AF37; /* The Golden color we discussed earlier */
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .contact-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            transition: 0.3s;
+        }
+
+        .contact-links a:hover {
+            color: #D4AF37;
+            transform: translateX(10px);
+        }
+
+        .contact-links i {
+            color: #D4AF37;
+            width: 30px;
+        }
+
+        /* Responsive Fix for Mobile */
+        @media (max-width: 768px) {
+            .contact-card {
+                padding: 1.5rem;
+            }
+            .contact-links a {
+                font-size: 1rem;
+                flex-direction: column;
+                gap: 5px;
+            }
         }
     </style>
 </head>
@@ -67,44 +90,37 @@
         </div>
     </nav>
 
-    <section class="page-container">
+    <main class="page-container">
         <h1 class="page-title">Get In Touch</h1>
         
-        <div class="contact-wrapper">
-            <div class="contact-info">
+        <div class="contact-content">
+            <div class="contact-card">
                 <h3>Contact Information</h3>
-                
-                <p>
+                <div class="contact-links">
                     <a href="mailto:moeedkamraan1123@gmail.com">
                         <i class="fas fa-envelope"></i> moeedkamraan1123@gmail.com
                     </a>
-                </p>
-
-                <p>
                     <a href="tel:+917006370956">
                         <i class="fas fa-phone"></i> +91 7006370956
                     </a>
-                </p>
-
-                <p>
                     <a href="https://www.linkedin.com/in/ishfaq-ahmad-dar-aaa277240/" target="_blank">
                         <i class="fab fa-linkedin"></i> LinkedIn Profile
                     </a>
-                </p>
-
-                <p>
                     <a href="https://github.com/Dar-Ishfaq-1" target="_blank">
                         <i class="fab fa-github"></i> GitHub Profile
                     </a>
-                </p>
+                </div>
             </div>
         </div>
-    </section>
+    </main>
 
     <footer>
         <p>&copy; <span id="year"></span> Ishfaq Dar. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
