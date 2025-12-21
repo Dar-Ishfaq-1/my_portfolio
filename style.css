@@ -291,3 +291,29 @@ h2 {
 h3 {
     color: #705922;
 }
+
+
+.hero h1 {
+    background: linear-gradient(135deg, #38bdf8 0%, #10b981 100%);
+    -webkit-background-clip: text;
+    background-clip: text; /* Standard property for compatibility */
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+
+/* Styling for 'Hi,' */
+.greeting {
+    color: #ffffff; /* Clean white */
+    font-weight: 700;
+}
+
+/* Styling for 'I'm Ishfaq Dar' */
+.my-name {
+    background: linear-gradient(135deg, #38bdf8 0%, #10b981 100%);
+    -webkit-background-clip: text;
+    background-clip: text; /* Fixes the compatibility error */
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    text-shadow: 0 0 20px rgba(56, 189, 248, 0.2); /* Subtle glow */
+}
