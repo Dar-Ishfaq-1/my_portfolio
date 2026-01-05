@@ -6,8 +6,7 @@ A professional, responsive portfolio website built to showcase data analytics pr
 
 ## 🚀 Live Demo
 
-Link : https://github.com/Dar-Ishfaq-1/my_portfolio.git
-🛠️ Tech Stack
+Link :  https://dar-ishfaq-1.github.io/my_portfolio/
 
 Frontend HTML5, CSS3, JavaScript (ES6+).
 Styling: Custom CSS with CSS Variables for theme management.
