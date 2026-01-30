@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Roadmap Generator | Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">DATA<span> ANALYST</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="roadmap.html" class="active">Roadmap</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <section class="page-container">
+        <h1 class="page-title">AI Career Roadmap Generator</h1>
+        <p class="section-subtitle">Enter your current skills, and our algorithm will build a custom path to job readiness.</p>
+        
+        <div class="generator-card">
+            <form id="roadmap-form">
+                <div class="form-grid">
+                    <div class="form-section">
+                        <h3><i class="fas fa-code"></i> Technical Proficiency</h3>
+                        
+                        <div class="form-group">
+                            <label>Programming / Coding</label>
+                            <select id="skill-coding">
+                                <option value="Beginner">Beginner (New to coding)</option>
+                                <option value="Intermediate">Intermediate (Understand loops/functions)</option>
+                                <option value="Expert">Expert (Complex algorithms)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Excel</label>
+                            <select id="skill-excel">
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate">Intermediate (VLOOKUP/Pivot)</option>
+                                <option value="Expert">Expert (VBA/Power Query)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>SQL</label>
+                            <select id="skill-sql">
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate">Intermediate (Joins/Aggregates)</option>
+                                <option value="Expert">Expert (Stored Procs/Optimization)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Python for Data</label>
+                            <select id="skill-python">
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate">Intermediate (Pandas/NumPy)</option>
+                                <option value="Expert">Expert (Scikit-learn/Pipelines)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3><i class="fas fa-chart-line"></i> Analytical Skills</h3>
+                        
+                        <div class="form-group">
+                            <label>Data Visualization</label>
+                            <select id="skill-viz">
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Expert">Expert</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Statistics & Math</label>
+                            <select id="skill-stats">
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Expert">Expert</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Business Thinking</label>
+                            <select id="skill-business">
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Expert">Expert</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>BI Tools (Tableau/PowerBI)</label>
+                            <select id="skill-tools">
+                                <option value="None">None</option>
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Expert">Expert</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-footer">
+                    <div class="form-group" style="flex:1">
+                        <label>Career Goal</label>
+                        <select id="career-goal">
+                            <option value="Internship">Internship</option>
+                            <option value="Entry-Level">Entry-Level Data Analyst</option>
+                            <option value="Engineer">Junior Data Engineer</option>
+                            <option value="Switcher">Career Switcher</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="flex:1">
+                        <label>Daily Study Time</label>
+                        <select id="study-time">
+                            <option value="low">1-2 Hours</option>
+                            <option value="medium">2-3 Hours</option>
+                            <option value="high">4+ Hours</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn primary-btn full-width">Generate My Roadmap <i class="fas fa-magic"></i></button>
+            </form>
+        </div>
+
+        <div id="roadmap-result" class="roadmap-result" style="display:none;">
+            
+            <div class="result-header">
+                <h2>Your Personalized Path</h2>
+                <div class="timeline-estimate">
+                    <span id="estimated-time"></span> to Job Ready
+                </div>
+            </div>
+
+            <div class="gap-analysis-card">
+                <h3>Skill Gap Analysis</h3>
+                <div class="gap-grid" id="gap-grid">
+                    </div>
+            </div>
+
+            <div class="roadmap-timeline" id="timeline-content">
+                </div>
+
+            <div class="checklist-card">
+                <h3>Job Readiness Checklist</h3>
+                <ul class="checklist" id="checklist-content">
+                    <li><i class="far fa-circle"></i> Build a Portfolio with 3+ Projects</li>
+                    <li><i class="far fa-circle"></i> Update LinkedIn Profile</li>
+                    <li><i class="far fa-circle"></i> Master SQL Joins & Window Functions</li>
+                    <li><i class="far fa-circle"></i> Create a resume tailored to Data Analytics</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Ishfaq Dar. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
