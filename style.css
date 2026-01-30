@@ -294,7 +294,7 @@ h3 {
 
 
 .hero h1 {
-    background: linear-gradient(135deg, #38bdf8 0%, #10b981 100%);
+    background: linear-gradient(135deg, #38bdf8 0%, #03ec51 100%);
     -webkit-background-clip: text;
     background-clip: text; /* Standard property for compatibility */
     -webkit-text-fill-color: transparent;
