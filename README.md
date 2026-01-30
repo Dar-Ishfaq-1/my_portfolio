@@ -1,27 +1,52 @@
+<div align="center">
+
+  <h1>Data Analyst Portfolio Website</h1>
+  <h3>Showcasing Data Analytics, Engineering & Web Development Skills</h3>
+
+  <p>
+    A professional, fully responsive portfolio website built to establish a strong digital presence. 
+    It serves as a central hub for my data projects, resume, and technical writing.
+  </p>
+
+  <br />
+
+  <a href="https://dar-ishfaq-1.github.io/my_portfolio/" target="_blank">
+    <img src="https://img.shields.io/badge/🚀_View_Live_Demo-0ea5e9?style=for-the-badge&logo=github&logoColor=white" alt="Live Demo" height="40" />
+  </a>
+
+</div>
+
+<br />
+<hr />
+
+ ✨ Key Features
+
+ 1. 🗺️ AI-Driven Career Roadmap Generator
+A custom-built interactive module that generates personalized learning paths for aspiring Data Analysts.
+Input: Users rate their skills (Excel, SQL, Python) and define career goals.
+Logic: JavaScript algorithm calculates skill gaps and generates a week-by-week study plan.
+Output: Provides a dynamic timeline, gap analysis, and job-readiness checklist.
+
+ 2. 📂 Interactive Project Showcase
+A clean, grid-based gallery displaying my technical projects (e.g., *Healthcare Analysis*, *Text-to-SQL Agent*).
+Modern Cards: Features hover effects, tech stack badges, and direct GitHub links.
+Data Focused: Specifically designed to highlight tools like Power BI, SQL, and Python.
+
+ 3. 🎨 Professional UI/UX
+Responsive Design: Fully mobile-optimized with a custom hamburger menu.
+Glassmorphism: Modern dark-themed aesthetic with glass-effect overlays.
+Dynamic Components: Active page highlighting, smooth scrolling, and auto-updating footer.
 
 
-# Data Analyst Portfolio Website
 
-A professional, responsive portfolio website built to showcase data analytics projects, technical skills, and career progression. This project serves as a central hub for my professional identity as a Data Analyst.
+🛠️ Tech Stack
 
-## 🚀 Live Demo
-
-Link :  https://dar-ishfaq-1.github.io/my_portfolio/
-
-Frontend HTML5, CSS3, JavaScript (ES6+).
-Styling: Custom CSS with CSS Variables for theme management.
-Icons: Font Awesome Library.
-Database (Optional Integration): Firebase Firestore for contact message storage.
-
-✨ Features
-
-Modern Hero Section: Features a high-resolution professional background with a clear call-to-action.
-Project Showcase: A grid-based layout to highlight data projects like Medical Inventory Optimization and Image Retrieval.
-Responsive Navigation: A mobile-friendly hamburger menu for seamless browsing on all devices.
-Dynamic UI Components:
-Automatic footer year updates via JavaScript.
-Active page highlighting in the navigation bar.
-Smooth scroll behavior for a premium user experience.
+| Component | Technology Used |
+| :--- | :--- |
+| Frontend | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) |
+| Styling | Custom CSS Variables (`:root`), Flexbox, CSS Grid |
+| Icons | Font Awesome Library |
+| Hosting | GitHub Pages |
 
 
 
@@ -33,21 +58,29 @@ Smooth scroll behavior for a premium user experience.
 ├── projects.html       # Portfolio of data analytics projects
 ├── blog.html           # Technical blog posts and insights
 ├── contact.html        # Centered contact information
-├── roadmap.html        # AI-driven career path generator
-├── style.css           # Global styles and responsive design
-├── script.js           # Navigation and Roadmap logic
+├── roadmap.html        # AI-driven career path generator (New Feature)
+├── style.css           # Global styles, variables, and responsive media queries
+├── script.js           # Navigation logic & Roadmap algorithm
 └── My Resume.pdf       # Downloadable resume file
 
 
-## 📈 Future Enhancements
 
-* Integrate a real-time Data Dashboard using an iframe (Tableau/Power BI).
-* Add a dark/light mode toggle.
-* Automate project updates via a headless CMS.
+📈 Future Enhancements
 
-## 👤 Author
+Real-time Dashboard: Integrating an embedded Tableau/Power BI dashboard via `iframe`.
+Theme Toggle: Adding a light/dark mode switcher for better accessibility.
+Blog CMS: Automating blog updates using a headless CMS content fetcher.
 
-**Ishfaq Dar**
 
-* LinkedIn: [ishfaq-ahmad-dar-aaa277240/](https://www.linkedin.com/in/ishfaq-ahmad-dar-aaa277240/)
-* GitHub: [Dar-Ishfaq-1](https://github.com/Dar-Ishfaq-1)
+👤 Author
+
+Ishfaq Dar
+
+LinkedIn: [ishfaq-ahmad-dar-aaa277240](https://www.linkedin.com/in/ishfaq-ahmad-dar-aaa277240/)
+GitHub: [Dar-Ishfaq-1](https://github.com/Dar-Ishfaq-1)
+
+<br />
+
+<div align="center">
+<p>⭐️ If you found this project helpful, please give it a star on GitHub!</p>
+</div>
