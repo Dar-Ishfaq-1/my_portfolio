@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Study Corner is Ishfaq Dar's curated digital library of PDF books for technical learning, language practice, and continuous self-development.">
+    <meta name="keywords" content="Study Corner, digital library, PDF books, data analyst books, backend development, Python, JavaScript, English learning">
+    <title>Study Corner | Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body data-study-corner>
+    <nav>
+        <div class="logo">DATA<span> ANALYST</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            <li><a href="study-corner.html" class="active">Study Corner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main class="study-page">
+        <section class="study-hero">
+            <div class="study-hero-content">
+                <p class="study-eyebrow">Personal archive and shared resource</p>
+                <h1>My Digital Library</h1>
+                <p>
+                    A curated collection of books for continuous learning, organized for personal reference and public reading.
+                </p>
+                <div class="study-hero-actions">
+                    <a href="#library" class="btn primary-btn"><i class="fas fa-book-open"></i> Browse Books</a>
+                    <a href="#reader" class="btn secondary-btn"><i class="fas fa-highlighter"></i> Open Reader</a>
+                </div>
+            </div>
+            <div class="study-hero-panel" aria-label="Library summary">
+                <div>
+                    <strong id="libraryCount">12</strong>
+                    <span>Books listed</span>
+                </div>
+                <div>
+                    <strong>PDF.js</strong>
+                    <span>Custom reader</span>
+                </div>
+                <div>
+                    <strong>Local</strong>
+                    <span>Saved notes</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="library" class="study-section">
+            <div class="study-section-header">
+                <div>
+                    <p class="study-eyebrow">Collection</p>
+                    <h2>Bookshelf</h2>
+                </div>
+                <p>Search by title, author, category, or tag.</p>
+            </div>
+
+            <div class="library-controls" aria-label="Library controls">
+                <label class="library-search">
+                    <i class="fas fa-search"></i>
+                    <input id="bookSearch" type="search" placeholder="Search books, authors, categories..." autocomplete="off">
+                </label>
+                <div id="categoryFilters" class="category-filters" aria-label="Book categories"></div>
+            </div>
+
+            <div id="bookGrid" class="book-grid" aria-live="polite"></div>
+            <div id="libraryPagination" class="library-pagination" aria-label="Book pagination"></div>
+        </section>
+
+        <section id="reader" class="study-section reader-shell" data-theme="dark">
+            <div class="reader-heading">
+                <div>
+                    <p class="study-eyebrow">Reading workspace</p>
+                    <h2 id="readerBookTitle">Select a book to begin</h2>
+                    <p id="readerBookMeta">Read-only preview with search, page controls, themes, and accessibility tools.</p>
+                </div>
+                <button id="readerDownloadLink" type="button" class="reader-download disabled" disabled>
+                    <i class="fas fa-download"></i>
+                    Download
+                </button>
+            </div>
+
+            <div class="reader-layout">
+                <aside class="reader-sidebar" aria-label="Reader navigation">
+                    <div class="sidebar-tabs" role="tablist" aria-label="Reader panels">
+                        <button class="sidebar-tab active" type="button" data-panel="thumbnails" aria-label="Page thumbnails"><i class="fas fa-table-cells-large"></i></button>
+                        <button class="sidebar-tab" type="button" data-panel="outline" aria-label="Table of contents"><i class="fas fa-list"></i></button>
+                        <button class="sidebar-tab reader-edit-tool" type="button" data-panel="notes" aria-label="Notes" aria-hidden="true"><i class="fas fa-note-sticky"></i></button>
+                    </div>
+                    <div id="thumbnailStrip" class="sidebar-panel thumbnail-strip active"></div>
+                    <div id="outlineList" class="sidebar-panel outline-list"></div>
+                    <div id="notesList" class="sidebar-panel notes-list reader-edit-tool"></div>
+                </aside>
+
+                <section class="reader-workspace" aria-label="PDF reader">
+                    <div class="reader-toolbar" aria-label="Page controls">
+                        <button id="prevPage" type="button" class="tool-button" aria-label="Previous page"><i class="fas fa-chevron-left"></i></button>
+                        <label class="page-jump" aria-label="Current page">
+                            <input id="pageNumber" type="number" min="1" value="1">
+                            <span id="pageCount">/ 0</span>
+                        </label>
+                        <button id="nextPage" type="button" class="tool-button" aria-label="Next page"><i class="fas fa-chevron-right"></i></button>
+                        <span class="toolbar-divider" aria-hidden="true"></span>
+                        <button id="zoomOut" type="button" class="tool-button" aria-label="Zoom out"><i class="fas fa-magnifying-glass-minus"></i></button>
+                        <span id="zoomValue" class="zoom-value">110%</span>
+                        <button id="zoomIn" type="button" class="tool-button" aria-label="Zoom in"><i class="fas fa-magnifying-glass-plus"></i></button>
+                        <button id="fitWidth" type="button" class="tool-button compact-label">Width</button>
+                        <button id="fitPage" type="button" class="tool-button compact-label">Page</button>
+                        <button id="rotatePage" type="button" class="tool-button" aria-label="Rotate page"><i class="fas fa-rotate-right"></i></button>
+                        <button id="fullscreenReader" type="button" class="tool-button" aria-label="Fullscreen"><i class="fas fa-expand"></i></button>
+                    </div>
+
+                    <div class="reader-toolbar secondary-toolbar" aria-label="Reading tools">
+                        <label class="document-search">
+                            <i class="fas fa-search"></i>
+                            <input id="documentSearch" type="search" placeholder="Search in PDF" autocomplete="off">
+                        </label>
+                        <button id="prevMatch" type="button" class="tool-button" aria-label="Previous search match"><i class="fas fa-arrow-up"></i></button>
+                        <button id="nextMatch" type="button" class="tool-button" aria-label="Next search match"><i class="fas fa-arrow-down"></i></button>
+                        <span id="matchCount" class="match-count">0 matches</span>
+                        <span class="toolbar-divider" aria-hidden="true"></span>
+                        <div class="highlight-palette reader-edit-tool" aria-label="Highlight colors" aria-hidden="true">
+                            <button type="button" class="color-swatch active" data-color="yellow" aria-label="Yellow highlight"></button>
+                            <button type="button" class="color-swatch" data-color="green" aria-label="Green highlight"></button>
+                            <button type="button" class="color-swatch" data-color="blue" aria-label="Blue highlight"></button>
+                            <button type="button" class="color-swatch" data-color="pink" aria-label="Pink highlight"></button>
+                            <button type="button" class="color-swatch" data-color="orange" aria-label="Orange highlight"></button>
+                        </div>
+                        <button id="highlightSelection" type="button" class="tool-button compact-label reader-edit-tool" aria-hidden="true">Highlight</button>
+                        <button id="noteMode" type="button" class="tool-button reader-edit-tool" aria-label="Add note" aria-hidden="true"><i class="fas fa-note-sticky"></i></button>
+                        <button id="drawMode" type="button" class="tool-button reader-edit-tool" aria-label="Pen tool" aria-hidden="true"><i class="fas fa-pen"></i></button>
+                        <button id="clearDrawing" type="button" class="tool-button reader-edit-tool" aria-label="Clear page drawing" aria-hidden="true"><i class="fas fa-eraser"></i></button>
+                        <button id="ttsButton" type="button" class="tool-button" aria-label="Read current page aloud"><i class="fas fa-volume-high"></i></button>
+                        <select id="readerTheme" class="reader-theme" aria-label="Reader theme">
+                            <option value="dark">Dark</option>
+                            <option value="light">Light</option>
+                            <option value="sepia">Sepia</option>
+                        </select>
+                    </div>
+
+                    <div id="readerStatus" class="reader-status">Choose a book from the shelf to load the reader.</div>
+                    <div id="pdfViewport" class="pdf-viewport" tabindex="0" aria-label="PDF pages"></div>
+                </section>
+            </div>
+        </section>
+
+        <section class="study-section legal-section" id="library-policy">
+            <div>
+                <p class="study-eyebrow">Library policy</p>
+                <h2>Rights and takedowns</h2>
+            </div>
+            <p>
+                Books hosted here are intended to be personally owned, open-source, public-domain, or shared with permission. If a listed PDF should be removed, contact <a href="mailto:moeedkamraan1123@gmail.com">moeedkamraan1123@gmail.com</a> with the title and proof of ownership.
+            </p>
+        </section>
+    </main>
+
+    <div id="downloadPaymentModal" class="payment-modal" hidden>
+        <div class="payment-modal-backdrop" data-close-payment></div>
+        <section class="payment-dialog" role="dialog" aria-modal="true" aria-labelledby="paymentTitle">
+            <button type="button" class="payment-close" data-close-payment aria-label="Close payment message">
+                <i class="fas fa-times"></i>
+            </button>
+            <p class="study-eyebrow">Download access</p>
+            <h2 id="paymentTitle">Payment Required</h2>
+            <p id="paymentBookTitle" class="payment-book-title"></p>
+            <p>
+                Online reading is available on this page. To download the PDF file, please request payment details on WhatsApp.
+            </p>
+            <div class="payment-contact">
+                <span><i class="fab fa-whatsapp"></i> WhatsApp</span>
+                <strong>7006370956</strong>
+            </div>
+            <div class="payment-actions">
+                <a id="paymentWhatsappLink" class="library-action primary" href="https://wa.me/917006370956" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i>
+                    Message on WhatsApp
+                </a>
+                <button type="button" class="library-action secondary" data-close-payment>Continue Reading</button>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Ishfaq Dar. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="script.js"></script>
+    <script src="study-corner.js"></script>
+</body>
+</html>
