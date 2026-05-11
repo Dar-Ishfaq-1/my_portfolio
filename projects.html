@@ -1,3 +1,56 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css)">
+    <style>
+        /* Minimal inline styling for the new skills section to integrate smoothly */
+        .skills-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 1rem;
+        }
+        .skills-tags .project-badge {
+            font-size: 0.9rem;
+            padding: 8px 15px;
+            border-radius: 20px;
+            background: rgba(0, 123, 255, 0.1);
+            color: #007bff;
+            border: 1px solid rgba(0, 123, 255, 0.3);
+        }
+
+        /* Styling for the projects introduction header */
+        .projects-intro {
+            text-align: center;
+            max-width: 850px;
+            margin: -1rem auto 3rem auto;
+            color: #a0aec0;
+            font-size: 1.15rem;
+            line-height: 1.7;
+        }
+        .projects-intro strong {
+            color: #e2e8f0;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">DATA<span> ANALYST</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,12 +66,212 @@
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="resume.html">Resume</a></li>
+>>>>>>> 722b4702c0e634faaa2a5bdf7867e18dbac20ea4
             <li><a href="projects.html" class="active">Projects</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="roadmap.html">Roadmap</a></li>
             <li><a href="study-corner.html">Study Corner</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+<<<<<<< HEAD
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <section class="page-container">
+        <h1 class="page-title">Featured Projects & Experience</h1>
+        
+        <div class="projects-intro">
+            <p>
+                Welcome to my portfolio. The projects below showcase my ability to transform raw data into actionable business intelligence and engineer intelligent systems. From analyzing hundreds of thousands of retail transactions and optimizing medical inventories to building AI-driven Text-to-SQL agents and advanced computer vision models, these case studies reflect my technical proficiency in <strong>Python, SQL, Power BI, and modern machine learning frameworks</strong>. Explore my work to see how I tackle complex business challenges through structured analysis and data-driven solutions.
+            </p>
+        </div>
+
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <div class="card-header">
+                    <h3>Customer Revenue & Retention Analysis</h3>
+                    <span class="project-badge">Python, SQL, Power BI</span>
+                </div>
+                <p>
+                    <strong>Business Problem:</strong> Identifying customer churn and revenue leakage in large retail datasets.<br><br>
+                    <strong>Solution:</strong> Analyzed <strong>400,000+ transactions</strong> using Python and SQL. Applied <strong>RFM segmentation</strong> to categorize customers and performed <strong>hypothesis testing (T-tests)</strong> for validation.<br><br>
+                    <strong>Impact:</strong> Improved customer targeting strategy and built an interactive <strong>Power BI dashboard</strong> to monitor KPIs and customer behavior trends.
+                </p>
+                <div class="card-links">
+                    <a href="[https://github.com/Dar-Ishfaq-1/Customer-Revenue-Retention-Analysis1.git](https://github.com/Dar-Ishfaq-1/Customer-Revenue-Retention-Analysis1.git)" target="_blank">
+                        View Code <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <h3>Revenue Intelligence & Customer Retention Analytics</h3>
+                    <span class="project-badge">Python, SQL, Jupyter, Seaborn</span>
+                </div>
+                <p>
+                    <strong>Business Problem:</strong> Slowing revenue growth and declining customer retention in e-commerce.<br><br>
+                    <strong>Solution:</strong> Analyzed a Brazilian E-Commerce dataset (100k+ records) using SQL window functions and Python. Merged multiple tables and calculated metrics like AOV, purchase frequency, and seasonal trends.<br><br>
+                    <strong>Impact:</strong> Identified high-value customer segments and top-performing product categories to drive loyalty programs and targeted marketing ROI.
+                </p>
+                <div class="card-links">
+                    <a href="[https://github.com/Dar-Ishfaq-1/E-Commerce-Revenue.git](https://github.com/Dar-Ishfaq-1/E-Commerce-Revenue.git)" target="_blank">View Code <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <h3>Medical Inventory Optimization</h3>
+                    <span class="project-badge">Python, Excel, Matplotlib</span>
+                </div>
+                <p>
+                    <strong>Role:</strong> Data Analytics Intern at 360DigiTMG<br><br>
+                    <strong>Solution:</strong> Analyzed historical medical inventory and consumption data. Performed data cleaning, EDA, and visualized usage trends to optimize stock quantities.<br><br>
+                    <strong>Impact:</strong> Highlighted stockout and overstock risks, suggesting optimized reorder levels to reduce inventory holding costs.
+                </p>
+                <div class="card-links">
+                    <a href="[https://github.com/Dar-Ishfaq-1/Medical-Inventory-Optimization.git](https://github.com/Dar-Ishfaq-1/Medical-Inventory-Optimization.git)" target="_blank">View Code <i class="fab fa-github"></i></a>
+                </div>    
+            </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <h3>Text-to-SQL AI Agent</h3>
+                    <span class="project-badge">Python, Flask, React, Google Gemini AI</span>
+                </div>
+                <p>
+                    <strong>Natural Language Database Interface</strong><br>
+                    Built a full-stack AI application that translates English questions into SQL queries using Google Gemini AI. Features a React frontend and a Flask backend executing safely on SQLite.<br><br>
+                    Includes an NLP error detection and self-correction loop to improve query accuracy for non-technical users.
+                </p>
+                <div class="card-links">
+                    <a href="[https://github.com/Dar-Ishfaq-1/Text-to-SQL-Agent.git](https://github.com/Dar-Ishfaq-1/Text-to-SQL-Agent.git)" target="_blank">View Code <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <h3>Factory Downtime & Equality Analysis</h3>
+                    <span class="project-badge">Tableau, Excel, JSON</span>
+                </div>
+                <p>
+                    <strong>Virtual Experience:</strong> Data Analytics Virtual Experience via Accenture.<br><br>
+                    <strong>Solution:</strong> Built an interactive Tableau dashboard from raw JSON telemetry data across 4 global factories. Classified equality scores in Excel into Fair, Unfair, and Highly Discriminative tiers.<br><br>
+                    <strong>Impact:</strong> Created a calculated downtime metric revealing the Osaka factory and Boiler machines as the top failure points.
+                </p>
+                <div class="card-links">
+                    <a href="[https://github.com/Dar-Ishfaq-1/Deloitte---Data-Analytics.git](https://github.com/Dar-Ishfaq-1/Deloitte---Data-Analytics.git)" target="_blank">View Code <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <h3>Data Labelling Job Simulation</h3>
+                    <span class="project-badge">Data Analysis, Classification</span>
+                </div>
+                <p>
+                    <strong>Virtual Experience:</strong> Job Simulation via Forage.<br><br>
+                    <strong>Tasks Performed:</strong> Conducted Intent Classification, Sentiment Analysis, and PII (Personally Identifiable Information) Identification to prepare and sanitize datasets for downstream analysis.
+                </p>
+                <div class="card-links">
+                    <a href="[https://github.com/Dar-Ishfaq-1/Data-Labelling---Job-Simulation.git](https://github.com/Dar-Ishfaq-1/Data-Labelling---Job-Simulation.git)" target="_blank">View Code <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <h3>Object Classification (VGG16 & K-Means)</h3>
+                    <span class="project-badge">Python, SQL, PowerBI</span>
+                </div>
+                <p>
+                    <strong>Unsupervised Learning Approach</strong><br>
+                    Combined deep feature extraction (VGG16) with K-Means clustering to group objects without labeled data. This project highlights how transfer learning can discover hidden patterns in unlabelled datasets.
+                </p>
+                <div class="card-links">
+                    <a href="[https://github.com/Dar-Ishfaq-1/Object-Classification-by-Unsupervised-Learning-with-VGG16-KMeans](https://github.com/Dar-Ishfaq-1/Object-Classification-by-Unsupervised-Learning-with-VGG16-KMeans)" target="_blank">View Code <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <h3>Content-Based Medical Image Retrieval</h3>
+                    <span class="project-badge">Python, OpenCV, ViT, FAISS</span>
+                </div>
+                <p>
+                    <strong>AI-Powered Image Search</strong><br>
+                    Designed a retrieval system using Vision Transformers (ViT) and FAISS to find visually similar medical images. Incorporates Explainable AI (XAI) to visualize exactly which regions of an image triggered the match.
+                </p>
+                <div class="card-links">
+                    <a href="[https://github.com/Dar-Ishfaq-1/CBMIR_MIT_PROJECT.git](https://github.com/Dar-Ishfaq-1/CBMIR_MIT_PROJECT.git)" target="_blank">View Code <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <h3>Healthcare Sales & Returns Analysis</h3>
+                    <span class="project-badge">SQL, Power BI, Excel</span>
+                </div>
+                <p>
+                    <strong>Business Problem:</strong> Lack of visibility into pharmacy sales and return patterns.<br><br>
+                    <strong>Solution:</strong> Cleaned and transformed healthcare datasets using SQL and Excel. Designed a <strong>Power BI dashboard</strong> highlighting top-selling drugs and return trends.<br><br>
+                    <strong>Impact:</strong> Enabled data-driven inventory and procurement decisions, improving operational efficiency.
+                </p>
+                <div class="card-links">
+                    <a href="[https://github.com/Dar-Ishfaq-1/Medical-inventory-optimization](https://github.com/Dar-Ishfaq-1/Medical-inventory-optimization)" target="_blank">
+                        View Code <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <h3>Data Analyst Portfolio Website</h3>
+                    <span class="project-badge">HTML, CSS, JavaScript</span>
+                </div>
+                <p>
+                    <strong>Personal Branding & Web Development</strong><br><br>
+                    Designed and developed a professional, responsive portfolio website to showcase data analytics projects and technical skills.<br><br>
+                    <strong>Responsive Design:</strong> Built a mobile-friendly interface with a custom hamburger menu and smooth scrolling.<br>
+                    <strong>Interactive Features:</strong> Implemented a "Career Roadmap Generator" using JavaScript to create personalized learning paths.<br>
+                    <strong>Professional UI:</strong> Created a modern, dark-themed aesthetic with CSS variables and glassmorphism effects.
+                </p>
+                <div class="card-links">
+                    <a href="[https://github.com/Dar-Ishfaq-1/my_portfolio.git](https://github.com/Dar-Ishfaq-1/my_portfolio.git)" target="_blank">View Code <i class="fab fa-github"></i></a>
+                    <a href="[https://dar-ishfaq-1.github.io/my_portfolio/](https://dar-ishfaq-1.github.io/my_portfolio/)" target="_blank" class="project-link-spaced">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <h3>Islamic Knowledge Portfolio</h3>
+                    <span class="project-badge">HTML5, CSS3, JavaScript</span>
+                </div>
+                <p>
+                    <strong>Authentic Hanafi Teachings & Education</strong><br><br>
+                    A responsive, high-performance website designed to share Islamic books and educational resources. Built with **zero dependencies** to ensure maximum speed (~25KB) and accessibility.<br><br>
+                    <strong>Resource Library:</strong> Curated collection of downloadable PDFs and organized articles.<br>
+                    <strong>Modern & Responsive:</strong> 100% mobile-friendly design with smooth animations and Islamic aesthetics.<br>
+                    <strong>Hanafi Guide:</strong> A complete, beginner-friendly introduction to the principles of the madhhab.
+                </p>
+                <div class="card-links">
+                    <a href="[https://github.com/Dar-Ishfaq-1/Sunni-Islamic-Portfolio.git](https://github.com/Dar-Ishfaq-1/Sunni-Islamic-Portfolio.git)" target="_blank">View Code <i class="fab fa-github"></i></a>
+                    <a href="[https://dar-ishfaq-1.github.io/Sunni-Islamic-Portfolio/](https://dar-ishfaq-1.github.io/Sunni-Islamic-Portfolio/)" target="_blank" class="project-link-spaced">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+        </div> 
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Ishfaq Dar. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+=======
         <div class="hamburger">
             <i class="fas fa-bars"></i>
         </div>
@@ -159,3 +412,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+>>>>>>> 722b4702c0e634faaa2a5bdf7867e18dbac20ea4

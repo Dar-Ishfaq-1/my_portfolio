@@ -2696,6 +2696,28 @@ footer p {
         grid-template-columns: 1fr;
         gap: var(--space-2xl);
     }
+<<<<<<< HEAD
+
+    .study-hero,
+    .library-controls,
+    .reader-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .reader-sidebar {
+        min-height: 260px;
+        border-right: 0;
+        border-bottom: 1px solid var(--border-medium);
+    }
+
+    .thumbnail-strip.active {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        gap: var(--space-sm);
+    }
+}
+=======
+>>>>>>> 722b4702c0e634faaa2a5bdf7867e18dbac20ea4
 
     .study-hero,
     .library-controls,
@@ -2846,6 +2868,52 @@ footer p {
         font-size: var(--font-sm);
         padding: 0.625rem 1.5rem;
     }
+<<<<<<< HEAD
+
+    .study-hero {
+        padding: var(--space-3xl) var(--space-sm);
+        min-height: auto;
+    }
+
+    .study-hero h1 {
+        font-size: clamp(2.4rem, 15vw, 4rem);
+    }
+
+    .study-section {
+        padding: var(--space-3xl) var(--space-sm);
+    }
+
+    .study-section-header,
+    .reader-heading,
+    .legal-section {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .category-filters {
+        justify-content: flex-start;
+    }
+
+    .book-card {
+        grid-template-columns: 1fr;
+    }
+
+    .book-cover {
+        min-height: 260px;
+    }
+
+    .reader-toolbar {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .pdf-viewport {
+        height: 70vh;
+        padding: var(--space-sm);
+    }
+}
+=======
+>>>>>>> 722b4702c0e634faaa2a5bdf7867e18dbac20ea4
 
     .study-hero {
         padding: var(--space-3xl) var(--space-sm);
@@ -2922,6 +2990,7 @@ footer p {
         height: 32px;
         font-size: var(--font-sm);
     }
+<<<<<<< HEAD
 
     .study-hero-actions .btn,
     .library-action {
@@ -2931,6 +3000,24 @@ footer p {
     .book-actions {
         flex-direction: column;
     }
+
+    .reader-layout {
+        min-height: 68vh;
+    }
+}
+=======
+>>>>>>> 722b4702c0e634faaa2a5bdf7867e18dbac20ea4
+
+    .study-hero-actions .btn,
+    .library-action {
+        width: 100%;
+    }
+
+    .book-actions {
+        flex-direction: column;
+    }
+<<<<<<< HEAD
+=======
 
     .reader-layout {
         min-height: 68vh;
@@ -3032,4 +3119,5 @@ footer p {
         break-inside: avoid;
         page-break-inside: avoid;
     }
+>>>>>>> 722b4702c0e634faaa2a5bdf7867e18dbac20ea4
 }
